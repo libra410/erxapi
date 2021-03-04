@@ -1,0 +1,5 @@
+Scaffold-DbContext "Server=(local);Database=ERXDB;UID=sa;PWD=P@ssw0rd;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -context "ERXDBContext" -Force
+
+AdditionalQuestionMapping
+AdditionalQuestionId
+ParticipantId

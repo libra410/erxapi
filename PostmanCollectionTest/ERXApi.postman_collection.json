@@ -1,0 +1,307 @@
+{
+	"info": {
+		"_postman_id": "44b5142e-1747-4b70-8dc6-4ddc680bc67d",
+		"name": "ERXApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44373/api/questionnaires/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44373/api/questionnaires/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44373",
+					"path": [
+						"api",
+						"questionnaires",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44373/api/questionnaires/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"QId\" : 0,\r\n\t\"Title\" : \"Mr\",\r\n\t\"FirstName\" : \"Sumate\",\r\n\t\"LastName\" : \"Chimyindee\",\r\n\t\"DateOfBirth\" : \"2019-12-09T00:00:00.000Z\",\r\n\t\"CountryId\" : 209,\r\n\t\"HouseAddress\" : \"Test\",\r\n\t\"WorkAddress\" : \"Test\",\r\n \t\"OccupationId\" : 4,\r\n \t\"JobTitle\"  : \"Test\",\r\n \t\"BusinessType\" : \"Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44373/api/questionnaires/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44373",
+					"path": [
+						"api",
+						"questionnaires",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44373/api/Questionnaires/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44373/api/Questionnaires/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44373",
+					"path": [
+						"api",
+						"Questionnaires",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44373/api/questionnaires/",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"QId\" : 3,\r\n\t\"Title\" : \"Ms.\",\r\n\t\"FirstName\" : \"Nattakorn\",\r\n\t\"LastName\" : \"Plubprasit\",\r\n\t\"DateOfBirth\" : \"1979-12-09T00:00:00.000Z\",\r\n\t\"CountryId\" : 209,\r\n\t\"HouseAddress\" : \"Test\",\r\n\t\"WorkAddress\" : \"Test\",\r\n \t\"OccupationId\" : 4,\r\n \t\"JobTitle\"  : \"Test\",\r\n \t\"BusinessType\" : \"Test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44373/api/questionnaires/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44373",
+					"path": [
+						"api",
+						"questionnaires",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44373/api/questionnaires/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44373/api/questionnaires/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44373",
+					"path": [
+						"api",
+						"questionnaires",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44373/api/questionnaires/GetCountries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44373/api/questionnaires/GetCountries",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44373",
+					"path": [
+						"api",
+						"questionnaires",
+						"GetCountries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44373/api/questionnaires/GetOccupations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44373/api/questionnaires/GetOccupations",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44373",
+					"path": [
+						"api",
+						"questionnaires",
+						"GetOccupations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44373/api/additionalquestions/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"QuestionId\" : 0,\r\n      \"AdditionalQuestionId\" : 1,\r\n      \"QuestionType\" : \"TextBox\",\r\n      \"QuestionTopic\" : \"Hobbies\",\r\n      \"Answer\" : \"Travel\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44373/api/additionalquestions/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44373",
+					"path": [
+						"api",
+						"additionalquestions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44373/api/additionalquestions/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"QuestionId\" : 0,\r\n      \"AdditionalQuestionId\" : 1,\r\n      \"QuestionType\" : \"TextBox\",\r\n      \"QuestionTopic\" : \"What is your favorite product?\",\r\n      \"Answer\" : \"Home Theater\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44373/api/additionalquestions/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44373",
+					"path": [
+						"api",
+						"additionalquestions",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44373/api/additionalquestions/1/1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44373/api/additionalquestions/1/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44373",
+					"path": [
+						"api",
+						"additionalquestions",
+						"1",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44373/api/additionalquestions/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"QuestionId\" : 1,\r\n      \"AdditionalQuestionId\" : 1,\r\n      \"QuestionType\" : \"TextBox\",\r\n      \"QuestionTopic\" : \"Why did you purchase this product?\",\r\n      \"Answer\" : \"I love it\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44373/api/additionalquestions/1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44373",
+					"path": [
+						"api",
+						"additionalquestions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44373/api/additionalquestions/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44373/api/additionalquestions/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44373",
+					"path": [
+						"api",
+						"additionalquestions",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
