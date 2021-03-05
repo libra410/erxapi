@@ -22,6 +22,12 @@ namespace ERXApi.Controllers
             additionalQuestionRepository = _additionalQuestionRepository;
         }
 
+        /// <summary>
+        /// Get additional questions
+        /// </summary>
+        /// <param name="additionalQuesId">Additional Questions id</param>
+        /// <param name="participantId">Participant id</param>
+        /// <returns></returns>
         // GET: api/<AdditionalQuestionsController>
         [HttpGet("{additionalQuesId}/{participantId}")]
         public async Task<IActionResult> Get(int additionalQuesId,int participantId)
@@ -42,7 +48,11 @@ namespace ERXApi.Controllers
             }
         }
 
-
+        /// <summary>
+        /// Save additional question
+        /// </summary>
+        /// <param name="model">AdditionalQuestion model</param>
+        /// <returns></returns>
         // POST api/<AdditionalQuestionsController>
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] AdditionalQuestion model)
@@ -72,6 +82,11 @@ namespace ERXApi.Controllers
             return BadRequest();
         }
 
+        /// <summary>
+        /// Update additional question
+        /// </summary>
+        /// <param name="model">AdditionalQuestion model</param>
+        /// <returns></returns>
         // PUT api/<AdditionalQuestionsController>/5
         [HttpPut]
         public async Task<IActionResult> Put([FromBody] AdditionalQuestion model)
@@ -98,6 +113,11 @@ namespace ERXApi.Controllers
             return BadRequest();
         }
 
+        /// <summary>
+        /// Delete additional question
+        /// </summary>
+        /// <param name="id">Question id</param>
+        /// <returns></returns>
         // DELETE api/<AdditionalQuestionsController>/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int? id)

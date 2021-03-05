@@ -25,6 +25,10 @@ namespace ERXApi.Controllers
         }
 
         // GET: api/<QuestionnairesController>
+        /// <summary>
+        /// Get all country
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("GetCountries")]
         public async Task<IActionResult> GetCountries()
@@ -44,6 +48,11 @@ namespace ERXApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        /// <summary>
+        /// Get all occupations
+        /// </summary>
+        /// <returns></returns>
         // GET: api/<QuestionnairesController>
         [HttpGet]
         [Route("GetOccupations")]
@@ -64,7 +73,11 @@ namespace ERXApi.Controllers
                 return BadRequest(ex.Message);
             }
         }
-       
+
+        /// <summary>
+        /// Download answer questionnaires format csv file 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("DownloadAnswerQuestionnaires")]
         public async Task<IActionResult> DownloadAnswerQuestionnaires()
@@ -99,6 +112,11 @@ namespace ERXApi.Controllers
             }
         }
 
+        /// <summary>
+        ///  Download answer questionnaires format csv file by participant id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("DownloadAnswerQuestionnaire/{id}")]
         public async Task<IActionResult> DownloadAnswerQuestionnaire(int? id)
@@ -130,6 +148,10 @@ namespace ERXApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Get all questionares
+        /// </summary>
+        /// <returns></returns>
         // GET: api/<QuestionnairesController>
         [HttpGet]
         public async Task<IActionResult> GetQuestionnaires()
@@ -150,6 +172,11 @@ namespace ERXApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Get questionnaire by participant id 
+        /// </summary>
+        /// <param name="id">Participant id</param>
+        /// <returns></returns>
         // GET api/<QuestionnairesController>/5
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int? id)
@@ -175,6 +202,11 @@ namespace ERXApi.Controllers
             }
         }
 
+        /// <summary>
+        /// Save questionare 
+        /// </summary>
+        /// <param name="model">Questionnaire model</param>
+        /// <returns></returns>
         // POST api/<QuestionnairesController>
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] Questionnaire model)
@@ -204,6 +236,11 @@ namespace ERXApi.Controllers
             return BadRequest();
         }
 
+        /// <summary>
+        ///  Update questionare 
+        /// </summary>
+        /// <param name="model">Questionnaire model</param>
+        /// <returns></returns>
         // PUT api/<QuestionnairesController>
         [HttpPut]
         public async Task<IActionResult> Put([FromBody] Questionnaire model)
@@ -230,19 +267,24 @@ namespace ERXApi.Controllers
             return BadRequest();
         }
 
+        /// <summary>
+        /// Delete questionare 
+        /// </summary>
+        /// <param name="id">Participant id</param>
+        /// <returns></returns>
         // DELETE api/<QuestionnairesController>/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int? qId)
+        public async Task<IActionResult> Delete(int? id)
         {
             int result = 0;
 
-            if (qId == null)
+            if (id == null)
             {
                 return BadRequest();
             }
             try
             {
-                result = await questionnaireRepository.DeleteQuestionnaire(qId);
+                result = await questionnaireRepository.DeleteQuestionnaire(id);
                 if (result == 0)
                 {
                     return NotFound();
